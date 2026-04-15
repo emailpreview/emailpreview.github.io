@@ -12,16 +12,16 @@
       </a>
       <nav aria-label="Main navigation">
         <ul class="header-nav">
-          <li><a href="#preview-tool">Preview Tool</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#best-practices">Best Practices</a></li>
-          <li><a href="#subject-preview">Subject Preview</a></li>
-          <li><a href="#guide">Guide</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/#preview-tool">Preview Tool</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#best-practices">Best Practices</a></li>
+          <li><a href="/#subject-preview">Subject Preview</a></li>
+          <li><a href="/#guide">Guide</a></li>
+          <li><a href="/#faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="header-cta">
-        <a href="#preview-tool" class="btn btn-primary" style="padding:9px 20px; font-size:0.88rem;">
+        <a href="/#preview-tool" class="btn btn-primary" style="padding:9px 20px; font-size:0.88rem;">
           Try Free Tool
         </a>
       </div>
@@ -32,13 +32,13 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-      <a href="#preview-tool">Preview Tool</a>
-      <a href="#features">Features</a>
-      <a href="#best-practices">Best Practices</a>
-      <a href="#subject-preview">Subject Preview</a>
-      <a href="#guide">Guide</a>
-      <a href="#faq">FAQ</a>
-      <a href="#preview-tool" class="btn btn-primary" style="margin-top:8px; justify-content:center; display:flex;">Try Free Tool</a>
+      <a href="/#preview-tool">Preview Tool</a>
+      <a href="/#features">Features</a>
+      <a href="/#best-practices">Best Practices</a>
+      <a href="/#subject-preview">Subject Preview</a>
+      <a href="/#guide">Guide</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#preview-tool" class="btn btn-primary" style="margin-top:8px; justify-content:center; display:flex;">Try Free Tool</a>
     </nav>
   </header>
   `;

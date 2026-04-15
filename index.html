@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmailPreview – HTML Email Preview & Testing Tool</title>
+  <meta name="description" content="EmailPreview is a free HTML email preview tool that lets you test, render, and optimize your email preview text, subject lines, and layouts across all major email clients." />
+  <meta name="keywords" content="email preview, html email preview, email preview text, preview text in email, email preview testing, email preview tools, email subject line preview" />
+  <meta name="author" content="EmailPreview" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://emailpreview.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EmailPreview – HTML Email Preview & Testing Tool" />
+  <meta property="og:description" content="Test and preview your HTML emails, subject lines, and preview text before sending. Free email preview tool." />
+  <meta property="og:url" content="https://emailpreview.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://emailpreview.github.io/assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EmailPreview – HTML Email Preview & Testing Tool" />
+  <meta name="twitter:description" content="Test your emails before sending. Preview HTML emails, subject lines, and preview text instantly." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "EmailPreview",
+    "url": "https://emailpreview.github.io/",
+    "description": "A free HTML email preview and testing tool for marketers and developers.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "HTML Email Preview",
+      "Email Preview Text Editor",
+      "Subject Line Preview",
+      "Mobile Email Preview",
+      "Email Preview Testing"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is email preview text?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email preview text is the short snippet of text that appears below or next to your subject line in most email clients. It gives recipients a quick glimpse of the email content before they open it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should email preview text be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email preview text should typically be between 85–140 characters. Most email clients display 40–140 characters depending on the device and screen size."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add preview text to an HTML email?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Add a hidden span element right after the opening body tag in your HTML email with the preview text. Use CSS to hide it from the visible email body while keeping it readable by email clients."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header injected by JS -->
+  <div id="header-root"></div>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-blob blob-1"></div>
+        <div class="hero-blob blob-2"></div>
+        <div class="hero-blob blob-3"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Free Email Preview Tool
+        </div>
+        <h1 class="hero-title">
+          Preview Your Emails<br />
+          <em>Before They Land</em>
+        </h1>
+        <p class="hero-subtitle">
+          Test HTML emails, craft perfect preview text, and preview subject lines exactly as your subscribers will see them — across every major email client.
+        </p>
+        <div class="hero-cta">
+          <a href="#preview-tool" class="btn btn-primary">Start Previewing Free</a>
+          <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Email Clients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Free to Use</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Previews</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-mockup-wrap">
+        <div class="email-inbox-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dot r"></div>
+            <div class="mockup-dot y"></div>
+            <div class="mockup-dot g"></div>
+            <span class="mockup-title">Inbox Preview</span>
+          </div>
+          <div class="mockup-row active" id="mockup-row-1">
+            <div class="mockup-avatar" style="background:#4F8EF7"></div>
+            <div class="mockup-content">
+              <div class="mockup-line sender">NewsletterCo</div>
+              <div class="mockup-line subject" id="preview-subject-display">Your weekly digest is here ✨</div>
+              <div class="mockup-line preview" id="preview-text-display">Catch up on everything that happened this week, including our top picks and exclusive...</div>
+            </div>
+            <div class="mockup-meta">
+              <span class="mockup-time">9:41 AM</span>
+            </div>
+          </div>
+          <div class="mockup-row">
+            <div class="mockup-avatar" style="background:#F7A14F"></div>
+            <div class="mockup-content">
+              <div class="mockup-line sender">ShopNow</div>
+              <div class="mockup-line subject">Flash Sale — 50% off today only</div>
+              <div class="mockup-line preview">Don't miss our biggest sale of the year. Hurry, ends tonight at midnight.</div>
+            </div>
+            <div class="mockup-meta">
+              <span class="mockup-time">8:10 AM</span>
+            </div>
+          </div>
+          <div class="mockup-row">
+            <div class="mockup-avatar" style="background:#58C896"></div>
+            <div class="mockup-content">
+              <div class="mockup-line sender">TechBlog</div>
+              <div class="mockup-line subject">AI tools every dev should know</div>
+              <div class="mockup-line preview">We tested 20+ tools so you don't have to. Here are the ones worth your time.</div>
+            </div>
+            <div class="mockup-meta">
+              <span class="mockup-time">7:55 AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE PREVIEW TOOL SECTION -->
+    <section class="section preview-tool-section" id="preview-tool">
+      <div class="container">
+        <div class="section-label">Live Tool</div>
+        <h2 class="section-title">HTML Email Preview Tool</h2>
+        <p class="section-subtitle">Paste your HTML email code or compose directly. See how it renders and how your preview text and subject line appear in the inbox.</p>
+
+        <div class="tool-layout">
+          <div class="tool-panel tool-input-panel">
+            <div class="panel-tabs">
+              <button class="tab-btn active" data-tab="html">HTML Code</button>
+              <button class="tab-btn" data-tab="compose">Compose</button>
+              <button class="tab-btn" data-tab="previewtext">Preview Text</button>
+            </div>
+
+            <!-- HTML Tab -->
+            <div class="tab-content active" id="tab-html">
+              <div class="input-group">
+                <label>Subject Line</label>
+                <input type="text" id="subject-input" class="text-input" placeholder="Enter your email subject line..." value="Your weekly digest is here ✨" />
+                <div class="char-counter"><span id="subject-char-count">39</span> chars — ideal: 40–60</div>
+              </div>
+              <div class="input-group">
+                <label>Preview Text (Preheader)</label>
+                <input type="text" id="preheader-input" class="text-input" placeholder="Enter your email preview text..." value="Catch up on everything that happened this week, including our top picks and exclusive..." />
+                <div class="char-counter"><span id="preheader-char-count">88</span> chars — ideal: 85–140</div>
+              </div>
+              <div class="input-group">
+                <label>HTML Email Code</label>
+                <textarea id="html-input" class="code-input" placeholder="Paste your HTML email here...">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="font-family: Georgia, serif; max-width:600px; margin:auto; padding:32px; background:#fff;"&gt;
+  &lt;h1 style="color:#1a1a2e; font-size:28px;"&gt;Your Weekly Digest 🗞️&lt;/h1&gt;
+  &lt;p style="color:#555; line-height:1.7;"&gt;Welcome back! Here's what happened this week in the world of design and technology.&lt;/p&gt;
+  &lt;hr style="border:none; border-top:2px solid #f0f0f0; margin:24px 0;" /&gt;
+  &lt;h2 style="color:#2d6cdf; font-size:20px;"&gt;🔥 Top Story: The Future of Email Design&lt;/h2&gt;
+  &lt;p style="color:#555; line-height:1.7;"&gt;Interactive emails are changing the way readers engage with content. From embedded forms to AMP components, the inbox is becoming a mini-app.&lt;/p&gt;
+  &lt;a href="#" style="display:inline-block; margin-top:16px; padding:12px 28px; background:#2d6cdf; color:#fff; border-radius:6px; text-decoration:none; font-weight:600;"&gt;Read More →&lt;/a&gt;
+  &lt;hr style="border:none; border-top:2px solid #f0f0f0; margin:24px 0;" /&gt;
+  &lt;p style="color:#aaa; font-size:12px;"&gt;You're receiving this because you subscribed. &lt;a href="#" style="color:#2d6cdf;"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+              </div>
+              <button class="btn btn-primary btn-full" id="render-btn">Preview Email</button>
+            </div>
+
+            <!-- Compose Tab -->
+            <div class="tab-content" id="tab-compose">
+              <div class="input-group">
+                <label>Subject Line</label>
+                <input type="text" id="compose-subject" class="text-input" placeholder="Email subject line..." />
+              </div>
+              <div class="input-group">
+                <label>Preview Text</label>
+                <input type="text" id="compose-preheader" class="text-input" placeholder="Preview text shown in inbox..." />
+              </div>
+              <div class="input-group">
+                <label>Email Body</label>
+                <div class="compose-toolbar">
+                  <button class="fmt-btn" data-cmd="bold" title="Bold"><b>B</b></button>
+                  <button class="fmt-btn" data-cmd="italic" title="Italic"><i>I</i></button>
+                  <button class="fmt-btn" data-cmd="underline" title="Underline"><u>U</u></button>
+                  <button class="fmt-btn" data-cmd="insertOrderedList" title="Ordered List">1.</button>
+                  <button class="fmt-btn" data-cmd="insertUnorderedList" title="Bullet List">•</button>
+                  <button class="fmt-btn" data-cmd="justifyLeft" title="Left">⬅</button>
+                  <button class="fmt-btn" data-cmd="justifyCenter" title="Center">↔</button>
+                </div>
+                <div class="rich-editor" id="compose-body" contenteditable="true">
+                  <p>Write your email content here...</p>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full" id="compose-render-btn">Preview Email</button>
+            </div>
+
+            <!-- Preview Text Tab -->
+            <div class="tab-content" id="tab-previewtext">
+              <div class="input-group">
+                <label>Sender Name</label>
+                <input type="text" id="pt-sender" class="text-input" placeholder="e.g. John from Acme" value="NewsletterCo" />
+              </div>
+              <div class="input-group">
+                <label>Subject Line</label>
+                <input type="text" id="pt-subject" class="text-input" placeholder="Your subject line..." value="Your weekly digest is here ✨" />
+              </div>
+              <div class="input-group">
+                <label>Preview Text</label>
+                <textarea id="pt-preheader" class="text-input" rows="3" placeholder="Your email preview text (85–140 chars recommended)...">Catch up on everything that happened this week, including our top picks and exclusive offers just for you.</textarea>
+                <div class="char-counter pt-counter"><span id="pt-char-count">103</span>/140 characters</div>
+                <div class="pt-bar-wrap"><div class="pt-bar" id="pt-bar"></div></div>
+              </div>
+              <div class="input-group">
+                <label>Preview Device</label>
+                <div class="device-toggle">
+                  <button class="device-btn active" data-device="desktop">🖥 Desktop</button>
+                  <button class="device-btn" data-device="mobile">📱 Mobile</button>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-full" id="pt-render-btn">Preview in Inbox</button>
+            </div>
+          </div>
+
+          <!-- Preview Panel -->
+          <div class="tool-panel tool-preview-panel">
+            <div class="preview-panel-header">
+              <span class="preview-panel-title">Email Render Preview</span>
+              <div class="preview-controls">
+                <button class="view-btn active" data-view="desktop" title="Desktop">🖥</button>
+                <button class="view-btn" data-view="tablet" title="Tablet">⬛</button>
+                <button class="view-btn" data-view="mobile" title="Mobile">📱</button>
+              </div>
+            </div>
+            <div class="preview-frame-wrap" id="preview-frame-wrap">
+              <div class="preview-device-frame desktop" id="preview-device-frame">
+                <iframe id="email-preview-frame" title="Email Preview" sandbox="allow-same-origin"></iframe>
+              </div>
+            </div>
+            <div class="preview-inbox-wrap" id="preview-inbox-wrap" style="display:none;">
+              <div class="inbox-preview-card">
+                <div class="ipc-avatar"></div>
+                <div class="ipc-body">
+                  <div class="ipc-sender" id="ipc-sender">NewsletterCo</div>
+                  <div class="ipc-subject" id="ipc-subject">Your weekly digest is here ✨</div>
+                  <div class="ipc-preview" id="ipc-preview">Catch up on everything that happened this week, including our top picks and exclusive...</div>
+                </div>
+                <div class="ipc-time">9:41 AM</div>
+              </div>
+            </div>
+            <div class="preview-actions">
+              <button class="btn btn-outline" id="copy-html-btn">Copy HTML</button>
+              <button class="btn btn-outline" id="download-html-btn">Download</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-label">Process</div>
+        <h2 class="section-title">How Email Preview Works</h2>
+        <p class="section-subtitle">From composing to testing, our workflow makes email preview testing effortless in three simple steps.</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon">✍️</div>
+            <h3>Compose or Paste</h3>
+            <p>Write your email from scratch using our rich compose editor, or paste your existing HTML email code directly into the tool.</p>
+          </div>
+          <div class="step-connector">→</div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon">🔎</div>
+            <h3>Set Preview Text</h3>
+            <p>Enter your subject line and email preview text. Our character counter guides you to the optimal length for maximum inbox impact.</p>
+          </div>
+          <div class="step-connector">→</div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon">📬</div>
+            <h3>Preview & Test</h3>
+            <p>Instantly see how your email renders across desktop, tablet, and mobile views. Test subject line preview and preheader text side by side.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything You Need for Email Preview</h2>
+        <p class="section-subtitle">Professional email preview tools packed into one free, easy-to-use platform.</p>
+        <div class="features-grid">
+          <div class="feature-card feature-card-lg">
+            <div class="feature-icon-lg">🖥️</div>
+            <h3>HTML Email Preview</h3>
+            <p>Render your raw HTML email code in a live, sandboxed preview frame. See exactly how your email will look — fonts, images, buttons, and all — before a single send.</p>
+            <ul class="feature-list">
+              <li>Live iframe rendering</li>
+              <li>Desktop, tablet & mobile views</li>
+              <li>No external dependencies</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Preview Text Editor</h3>
+            <p>Craft and preview your email preheader text with real-time character counting and inbox simulation.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📏</div>
+            <h3>Subject Line Preview</h3>
+            <p>See your subject line exactly as it appears in Gmail, Apple Mail, and Outlook — with truncation warnings.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mobile Email Preview</h3>
+            <p>Switch to mobile view to ensure your email is fully responsive and readable on small screens.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">✏️</div>
+            <h3>Rich Compose Editor</h3>
+            <p>Don't have HTML? Compose your email visually using our built-in rich text editor and preview instantly.</p>
+          </div>
+          <div class="feature-card feature-card-lg feature-card-accent">
+            <div class="feature-icon-lg">⬇️</div>
+            <h3>Download & Export</h3>
+            <p>Copy the rendered HTML to clipboard or download your email file directly. Ready to plug into Mailchimp, HubSpot, or any ESP.</p>
+            <ul class="feature-list">
+              <li>One-click HTML copy</li>
+              <li>Download as .html file</li>
+              <li>Works with all major ESPs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW TEXT BEST PRACTICES -->
+    <section class="section bestpractices-section" id="best-practices">
+      <div class="container">
+        <div class="section-label">Best Practices</div>
+        <h2 class="section-title">Email Preview Text Best Practices</h2>
+        <p class="section-subtitle">Master the art of the preheader. Your preview text is prime inbox real estate — here's how to use it right.</p>
+
+        <div class="bp-grid">
+          <div class="bp-card bp-do">
+            <div class="bp-badge do-badge">✅ Do</div>
+            <ul>
+              <li>Keep preview text between <strong>85–140 characters</strong></li>
+              <li>Complement your subject line — don't repeat it</li>
+              <li>Lead with the most compelling information</li>
+              <li>Include a subtle call-to-action or hook</li>
+              <li>Personalize when possible ("John, your cart is waiting")</li>
+              <li>Test on both desktop and mobile views</li>
+              <li>Use preview text to add urgency or curiosity</li>
+            </ul>
+          </div>
+          <div class="bp-card bp-dont">
+            <div class="bp-badge dont-badge">❌ Don't</div>
+            <ul>
+              <li>Don't repeat the exact subject line word-for-word</li>
+              <li>Don't leave the preheader as default "View in browser"</li>
+              <li>Don't exceed 140 characters — it gets cut off</li>
+              <li>Don't use all caps or excessive punctuation!!!</li>
+              <li>Don't use spammy words like "FREE!!!" or "Click Now"</li>
+              <li>Don't leave the preview text blank</li>
+              <li>Don't front-load unsubscribe links</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bp-tip-box">
+          <div class="tip-icon">💡</div>
+          <div class="tip-content">
+            <strong>Pro Tip:</strong> The ideal email preview text acts as a second subject line. While your subject line grabs attention, the preview text seals the deal. Think of them as a headline + subheadline combo working together to drive opens.
+          </div>
+        </div>
+
+        <div class="bp-examples">
+          <h3>Preview Text Examples by Industry</h3>
+          <div class="examples-table-wrap">
+            <table class="examples-table">
+              <thead>
+                <tr>
+                  <th>Industry</th>
+                  <th>Subject Line</th>
+                  <th>Good Preview Text</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>E-commerce</td>
+                  <td>Flash Sale — 50% Off Today</td>
+                  <td>Your favorite items are waiting. Shop before midnight and save on 500+ products.</td>
+                </tr>
+                <tr>
+                  <td>SaaS</td>
+                  <td>New Feature: Team Dashboards</td>
+                  <td>Collaborate faster with your team. Set up your shared dashboard in under 2 minutes.</td>
+                </tr>
+                <tr>
+                  <td>Newsletter</td>
+                  <td>This Week in Tech 🗞️</td>
+                  <td>AI tools that actually work, a deep dive on GPT-5, and 3 reads you won't regret.</td>
+                </tr>
+                <tr>
+                  <td>Event</td>
+                  <td>You're Invited: Annual Summit</td>
+                  <td>Join 2,000+ industry leaders. Early-bird tickets end Friday — grab yours now.</td>
+                </tr>
+                <tr>
+                  <td>Finance</td>
+                  <td>Your Monthly Statement</td>
+                  <td>Your account summary for March is ready. Total balance: $4,312.50. Tap to review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECT LINE PREVIEW SECTION -->
+    <section class="section subjectline-section" id="subject-preview">
+      <div class="container">
+        <div class="section-label">Subject Line Preview</div>
+        <h2 class="section-title">Email Subject Line Preview</h2>
+        <p class="section-subtitle">How your subject line appears varies across email clients. Test and optimize for every major inbox.</p>
+
+        <div class="sl-tool">
+          <div class="sl-input-row">
+            <input type="text" id="sl-subject" class="text-input sl-subject-input" placeholder="Type your subject line here..." value="Your weekly digest is here ✨" />
+            <input type="text" id="sl-preheader-input" class="text-input sl-preheader-input" placeholder="Preview text / preheader..." value="Catch up on everything this week — top stories, tools, and tips." />
+          </div>
+          <div class="sl-clients-grid">
+            <div class="sl-client-card" data-client="gmail">
+              <div class="sl-client-logo gmail-logo">G</div>
+              <div class="sl-client-name">Gmail</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row">
+                  <div class="sl-avatar" style="background:#EA4335"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">Sender</span>
+                    <span class="sl-subject-text" id="gmail-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="gmail-preview"> — Catch up on everything this week...</span>
+                  </div>
+                  <span class="sl-time">9:41 AM</span>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~70 chars subject line on desktop</div>
+            </div>
+            <div class="sl-client-card" data-client="outlook">
+              <div class="sl-client-logo outlook-logo">O</div>
+              <div class="sl-client-name">Outlook</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row outlook-style">
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">Sender</span>
+                    <span class="sl-subject-text" id="outlook-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="outlook-preview">Catch up on everything this week...</span>
+                  </div>
+                  <span class="sl-time">9:41 AM</span>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~60 chars subject line on desktop</div>
+            </div>
+            <div class="sl-client-card" data-client="apple">
+              <div class="sl-client-logo apple-logo">✉</div>
+              <div class="sl-client-name">Apple Mail</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row apple-style">
+                  <div class="sl-avatar" style="background:#34C759"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">Sender</span>
+                    <span class="sl-time small-time">9:41 AM</span>
+                    <br/>
+                    <span class="sl-subject-text" id="apple-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="apple-preview">Catch up on everything this week — top stories, tools, and tips.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sl-limit-note">Shows longer preview text on desktop</div>
+            </div>
+            <div class="sl-client-card" data-client="mobile">
+              <div class="sl-client-logo mobile-logo">📱</div>
+              <div class="sl-client-name">iOS Mail</div>
+              <div class="sl-client-preview mobile-preview">
+                <div class="sl-inbox-row mobile-style">
+                  <div class="sl-avatar" style="background:#5856D6"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">Sender</span>
+                    <span class="sl-time small-time">9:41 AM</span>
+                    <br/>
+                    <span class="sl-subject-text" id="mobile-subject">Your weekly digest…</span>
+                    <br/>
+                    <span class="sl-preview-text" id="mobile-preview">Catch up on everything this week...</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~35 chars subject on mobile</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="sl-preview-btn">Update All Previews</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KNOWLEDGE / EDUCATIONAL SECTION -->
+    <section class="section knowledge-section" id="guide">
+      <div class="container">
+        <div class="section-label">Learn</div>
+        <h2 class="section-title">The Complete Guide to Email Preview</h2>
+        <p class="section-subtitle">Everything you need to know about email preview text, HTML email preview, and testing your emails effectively.</p>
+        <div class="knowledge-grid">
+          <article class="knowledge-card">
+            <div class="kc-tag">Fundamentals</div>
+            <h3>What Is Email Preview Text?</h3>
+            <p>Email preview text — also called preheader text — is the short snippet that appears beneath or beside your subject line in inbox listings. It's your second chance to convince a reader to open your email.</p>
+            <p>Most email clients display between 40–140 characters of preview text, depending on the device and app. On desktop Gmail, you might see up to 100 characters; on iOS, it may be truncated to 50.</p>
+            <p>Because this text is pulled from the first visible content in your email body, it must be carefully crafted — or set explicitly using a hidden preheader element in your HTML.</p>
+          </article>
+          <article class="knowledge-card">
+            <div class="kc-tag">HTML Technique</div>
+            <h3>How to Add Preview Text in HTML Email</h3>
+            <p>The standard technique involves placing a hidden <code>&lt;span&gt;</code> element at the very top of your email body. Email clients read this as the preview text, while it stays invisible to readers who open the email.</p>
+            <pre class="code-snippet"><code>&lt;body&gt;
+  &lt;span style="display:none; max-height:0; overflow:hidden; mso-hide:all;"&gt;
+    Your preview text goes here...
+  &lt;/span&gt;
+  &lt;!-- Rest of email --&gt;
+&lt;/body&gt;</code></pre>
+            <p>After the preview text, add invisible filler characters (like <code>&amp;zwnj;</code>) to prevent the email client from pulling additional content into the preview.</p>
+          </article>
+          <article class="knowledge-card">
+            <div class="kc-tag">Testing</div>
+            <h3>Email Preview Testing: Why It Matters</h3>
+            <p>Email preview testing ensures that your carefully crafted message looks and reads the way you intended — before it hits thousands of inboxes. A broken layout, missing images, or a truncated subject line can dramatically reduce open rates and damage brand trust.</p>
+            <p>Good email preview testing covers: HTML rendering across email clients, subject line display length, preview text truncation, mobile responsiveness, and image rendering with alt text fallback.</p>
+          </article>
+          <article class="knowledge-card">
+            <div class="kc-tag">Optimization</div>
+            <h3>Optimizing Your HTML Email Preview</h3>
+            <p>An optimized HTML email preview combines three elements: a compelling subject line, well-crafted preview text, and a clean email design. Together, they form the first impression your subscriber receives.</p>
+            <p>Use our email preview tool to test all three simultaneously. Adjust your subject line for length, refine your preview text for engagement, and check that your HTML renders perfectly across all screen sizes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section faq-section" id="faq">
+      <div class="container faq-container">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Common questions about email preview, preview text, and testing your emails.</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">What is email preview text? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>Email preview text is the short snippet of text that appears below or next to your subject line in most email clients (like Gmail, Outlook, and Apple Mail). It gives recipients a quick glimpse of your email's content before they open it, and is one of the most important — yet often overlooked — elements of email marketing.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How long should email preview text be? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>The ideal email preview text length is between 85 and 140 characters. Most email clients display 40–140 characters depending on the device and screen size. Keep the most important content within the first 85 characters to ensure it's visible on all platforms, including mobile.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How do I add preview text to an HTML email? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>Add a hidden <code>&lt;span&gt;</code> element right after the opening <code>&lt;body&gt;</code> tag in your HTML email with your desired preview text. Style it with <code>display:none; max-height:0; overflow:hidden;</code> to hide it from the visible email. Most email clients will read this content as the preview text.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Can I preview my HTML email for free? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>Yes! EmailPreview is completely free to use. Simply paste your HTML email code into our preview tool and instantly see how it renders. You can also switch between desktop, tablet, and mobile views to check responsiveness — all at no cost.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">What is the difference between preview text and subject line? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>The subject line is the primary headline of your email, appearing in bold in most inbox views. Preview text (or preheader text) is the secondary snippet that follows the subject line in lighter text. Together, they form a two-part message designed to drive opens. The subject line gets attention; the preview text closes the deal.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Why does my preview text show random content instead of my preheader? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>If you haven't set an explicit preheader in your HTML, email clients will pull the first readable text from your email body — which could be navigation links, "View in browser" text, or other unintended content. Always set your preview text explicitly using a hidden preheader element for consistent results across all clients.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">What email clients does EmailPreview support? <span class="faq-arrow">↓</span></button>
+            <div class="faq-a">
+              <p>Our subject line preview simulator shows inbox rendering for Gmail, Outlook, Apple Mail, and iOS Mail — the four most widely used email clients that together represent the majority of global email opens. Our HTML preview renders in a sandboxed frame that closely approximates how modern email clients display HTML content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="cta">
+      <div class="container cta-inner">
+        <div class="cta-blob"></div>
+        <div class="section-label light">Get Started</div>
+        <h2 class="cta-title">Ready to Send Better Emails?</h2>
+        <p class="cta-subtitle">Stop guessing how your emails look. Preview your HTML emails, optimize your preview text, and nail every subject line — completely free.</p>
+        <div class="cta-btns">
+          <a href="#preview-tool" class="btn btn-white">Launch Email Preview Tool</a>
+          <a href="#guide" class="btn btn-ghost-white">Read the Guide</a>
+        </div>
+        <div class="cta-note">No account required. No limits. Free forever.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injected by JS -->
+  <div id="footer-root"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

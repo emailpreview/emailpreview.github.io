@@ -22,35 +22,36 @@
         <div class="footer-col">
           <h4>Tools</h4>
           <ul>
-            <li><a href="#preview-tool">HTML Email Preview</a></li>
-            <li><a href="#preview-tool">Preview Text Editor</a></li>
-            <li><a href="#subject-preview">Subject Line Preview</a></li>
-            <li><a href="#preview-tool">Mobile Email Preview</a></li>
+            <li><a href="/#preview-tool">HTML Email Preview</a></li>
+            <li><a href="/#preview-tool">Preview Text Editor</a></li>
+            <li><a href="/#subject-preview">Subject Line Preview</a></li>
+            <li><a href="/#preview-tool">Mobile Email Preview</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Learn</h4>
           <ul>
-            <li><a href="#guide">Email Preview Guide</a></li>
-            <li><a href="#best-practices">Best Practices</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/#guide">Email Preview Guide</a></li>
+            <li><a href="/#best-practices">Best Practices</a></li>
+            <li><a href="/#how-it-works">How It Works</a></li>
+            <li><a href="/#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>About</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="https://github.com/emailpreview" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-            <li><a href="mailto:hello@emailpreview.github.io">Contact</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="about">About</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© ${year} EmailPreview. Free email preview tool.</span>
         <div class="footer-bottom-links">
-          <a href="#" onclick="return false;">Privacy</a>
-          <a href="#" onclick="return false;">Terms</a>
+          <a href="privacy" onclick="return false;">Privacy</a>
+          <a href="terms" onclick="return false;">Terms</a>
           <a href="https://github.com/emailpreview" rel="noopener noreferrer" target="_blank">GitHub</a>
         </div>
       </div>

@@ -91,7 +91,7 @@
 
   <main>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION - Clean, no mockup -->
     <section class="hero" id="home">
       <div class="hero-bg">
         <div class="hero-grid"></div>
@@ -107,7 +107,7 @@
         <h1 class="hero-title">
           Preview Your Emails<br />
           <em>Before They Land</em>
-        </h1>        
+        </h1>
         <p class="hero-subtitle">
           Test HTML emails, craft perfect preview text, and preview subject lines exactly as your subscribers will see them — across every major email client.
         </p>
@@ -132,46 +132,90 @@
           </div>
         </div>
       </div>
-      <div class="hero-mockup-wrap">
-        <div class="email-inbox-mockup">
-          <div class="mockup-header">
-            <div class="mockup-dot r"></div>
-            <div class="mockup-dot y"></div>
-            <div class="mockup-dot g"></div>
-            <span class="mockup-title">Inbox Preview</span>
+    </section>
+
+    <!-- SUBJECT LINE PREVIEW SECTION - Moved UP (now appears before the tool) -->
+    <section class="section subjectline-section" id="subject-preview">
+      <div class="container">
+        <div class="section-label">Live Inbox Preview</div>
+        <h2 class="section-title">See Your Subject Line & Preview Text in Real Email Clients</h2>
+        <p class="section-subtitle">Type below and watch how your email appears in Gmail, Outlook, Apple Mail, and iOS — instantly.</p>
+
+        <div class="sl-tool">
+          <div class="sl-input-row">
+            <input type="text" id="sl-subject" class="text-input sl-subject-input" placeholder="Type your subject line here..." value="Your weekly digest is here ✨" />
+            <input type="text" id="sl-preheader-input" class="text-input sl-preheader-input" placeholder="Preview text / preheader..." value="Catch up on everything this week — top stories, tools, and tips." />
           </div>
-          <div class="mockup-row active" id="mockup-row-1">
-            <div class="mockup-avatar" style="background:#4F8EF7"></div>
-            <div class="mockup-content">
-              <div class="mockup-line sender">NewsletterCo</div>
-              <div class="mockup-line subject" id="preview-subject-display">Your weekly digest is here ✨</div>
-              <div class="mockup-line preview" id="preview-text-display">Catch up on everything that happened this week, including our top picks and exclusive...</div>
+          <div class="sl-clients-grid">
+            <div class="sl-client-card" data-client="gmail">
+              <div class="sl-client-logo gmail-logo">G</div>
+              <div class="sl-client-name">Gmail</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row">
+                  <div class="sl-avatar" style="background:#EA4335"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">NewsletterCo</span>
+                    <span class="sl-subject-text" id="gmail-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="gmail-preview"> — Catch up on everything this week...</span>
+                  </div>
+                  <span class="sl-time">9:41 AM</span>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~70 chars subject line on desktop</div>
             </div>
-            <div class="mockup-meta">
-              <span class="mockup-time">9:41 AM</span>
+            <div class="sl-client-card" data-client="outlook">
+              <div class="sl-client-logo outlook-logo">O</div>
+              <div class="sl-client-name">Outlook</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row outlook-style">
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">NewsletterCo</span>
+                    <span class="sl-subject-text" id="outlook-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="outlook-preview">Catch up on everything this week...</span>
+                  </div>
+                  <span class="sl-time">9:41 AM</span>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~60 chars subject line on desktop</div>
+            </div>
+            <div class="sl-client-card" data-client="apple">
+              <div class="sl-client-logo apple-logo">✉</div>
+              <div class="sl-client-name">Apple Mail</div>
+              <div class="sl-client-preview">
+                <div class="sl-inbox-row apple-style">
+                  <div class="sl-avatar" style="background:#34C759"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">NewsletterCo</span>
+                    <span class="sl-time small-time">9:41 AM</span>
+                    <br/>
+                    <span class="sl-subject-text" id="apple-subject">Your weekly digest is here ✨</span>
+                    <span class="sl-preview-text" id="apple-preview">Catch up on everything this week — top stories, tools, and tips.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sl-limit-note">Shows longer preview text on desktop</div>
+            </div>
+            <div class="sl-client-card" data-client="mobile">
+              <div class="sl-client-logo mobile-logo">📱</div>
+              <div class="sl-client-name">iOS Mail</div>
+              <div class="sl-client-preview mobile-preview">
+                <div class="sl-inbox-row mobile-style">
+                  <div class="sl-avatar" style="background:#5856D6"></div>
+                  <div class="sl-row-content">
+                    <span class="sl-sender-name">NewsletterCo</span>
+                    <span class="sl-time small-time">9:41 AM</span>
+                    <br/>
+                    <span class="sl-subject-text" id="mobile-subject">Your weekly digest…</span>
+                    <br/>
+                    <span class="sl-preview-text" id="mobile-preview">Catch up on everything this week...</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sl-limit-note">Max ~35 chars subject on mobile</div>
             </div>
           </div>
-          <div class="mockup-row">
-            <div class="mockup-avatar" style="background:#F7A14F"></div>
-            <div class="mockup-content">
-              <div class="mockup-line sender">ShopNow</div>
-              <div class="mockup-line subject">Flash Sale — 50% off today only</div>
-              <div class="mockup-line preview">Don't miss our biggest sale of the year. Hurry, ends tonight at midnight.</div>
-            </div>
-            <div class="mockup-meta">
-              <span class="mockup-time">8:10 AM</span>
-            </div>
-          </div>
-          <div class="mockup-row">
-            <div class="mockup-avatar" style="background:#58C896"></div>
-            <div class="mockup-content">
-              <div class="mockup-line sender">TechBlog</div>
-              <div class="mockup-line subject">AI tools every dev should know</div>
-              <div class="mockup-line preview">We tested 20+ tools so you don't have to. Here are the ones worth your time.</div>
-            </div>
-            <div class="mockup-meta">
-              <span class="mockup-time">7:55 AM</span>
-            </div>
+          <div class="sl-live-note">
+            ✨ Updates as you type — no button needed
           </div>
         </div>
       </div>
@@ -180,16 +224,15 @@
     <!-- LIVE PREVIEW TOOL SECTION -->
     <section class="section preview-tool-section" id="preview-tool">
       <div class="container">
-        <div class="section-label">Live Tool</div>
+        <div class="section-label">Full Email Renderer</div>
         <h2 class="section-title">HTML Email Preview Tool</h2>
-        <p class="section-subtitle">Paste your HTML email code or compose directly. See how it renders and how your preview text and subject line appear in the inbox.</p>
+        <p class="section-subtitle">Paste your HTML email code or compose directly. See exactly how your email renders — fonts, images, buttons, and all.</p>
 
         <div class="tool-layout">
           <div class="tool-panel tool-input-panel">
             <div class="panel-tabs">
               <button class="tab-btn active" data-tab="html">HTML Code</button>
               <button class="tab-btn" data-tab="compose">Compose</button>
-              <button class="tab-btn" data-tab="previewtext">Preview Text</button>
             </div>
 
             <!-- HTML Tab -->
@@ -250,32 +293,6 @@
               </div>
               <button class="btn btn-primary btn-full" id="compose-render-btn">Preview Email</button>
             </div>
-
-            <!-- Preview Text Tab -->
-            <div class="tab-content" id="tab-previewtext">
-              <div class="input-group">
-                <label>Sender Name</label>
-                <input type="text" id="pt-sender" class="text-input" placeholder="e.g. John from Acme" value="NewsletterCo" />
-              </div>
-              <div class="input-group">
-                <label>Subject Line</label>
-                <input type="text" id="pt-subject" class="text-input" placeholder="Your subject line..." value="Your weekly digest is here ✨" />
-              </div>
-              <div class="input-group">
-                <label>Preview Text</label>
-                <textarea id="pt-preheader" class="text-input" rows="3" placeholder="Your email preview text (85–140 chars recommended)...">Catch up on everything that happened this week, including our top picks and exclusive offers just for you.</textarea>
-                <div class="char-counter pt-counter"><span id="pt-char-count">103</span>/140 characters</div>
-                <div class="pt-bar-wrap"><div class="pt-bar" id="pt-bar"></div></div>
-              </div>
-              <div class="input-group">
-                <label>Preview Device</label>
-                <div class="device-toggle">
-                  <button class="device-btn active" data-device="desktop">🖥 Desktop</button>
-                  <button class="device-btn" data-device="mobile">📱 Mobile</button>
-                </div>
-              </div>
-              <button class="btn btn-primary btn-full" id="pt-render-btn">Preview in Inbox</button>
-            </div>
           </div>
 
           <!-- Preview Panel -->
@@ -291,17 +308,6 @@
             <div class="preview-frame-wrap" id="preview-frame-wrap">
               <div class="preview-device-frame desktop" id="preview-device-frame">
                 <iframe id="email-preview-frame" title="Email Preview" sandbox="allow-same-origin"></iframe>
-              </div>
-            </div>
-            <div class="preview-inbox-wrap" id="preview-inbox-wrap" style="display:none;">
-              <div class="inbox-preview-card">
-                <div class="ipc-avatar"></div>
-                <div class="ipc-body">
-                  <div class="ipc-sender" id="ipc-sender">NewsletterCo</div>
-                  <div class="ipc-subject" id="ipc-subject">Your weekly digest is here ✨</div>
-                  <div class="ipc-preview" id="ipc-preview">Catch up on everything that happened this week, including our top picks and exclusive...</div>
-                </div>
-                <div class="ipc-time">9:41 AM</div>
               </div>
             </div>
             <div class="preview-actions">
@@ -476,91 +482,6 @@
               </tbody>
             </table>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUBJECT LINE PREVIEW SECTION -->
-    <section class="section subjectline-section" id="subject-preview">
-      <div class="container">
-        <div class="section-label">Subject Line Preview</div>
-        <h2 class="section-title">Email Subject Line Preview</h2>
-        <p class="section-subtitle">How your subject line appears varies across email clients. Test and optimize for every major inbox.</p>
-
-        <div class="sl-tool">
-          <div class="sl-input-row">
-            <input type="text" id="sl-subject" class="text-input sl-subject-input" placeholder="Type your subject line here..." value="Your weekly digest is here ✨" />
-            <input type="text" id="sl-preheader-input" class="text-input sl-preheader-input" placeholder="Preview text / preheader..." value="Catch up on everything this week — top stories, tools, and tips." />
-          </div>
-          <div class="sl-clients-grid">
-            <div class="sl-client-card" data-client="gmail">
-              <div class="sl-client-logo gmail-logo">G</div>
-              <div class="sl-client-name">Gmail</div>
-              <div class="sl-client-preview">
-                <div class="sl-inbox-row">
-                  <div class="sl-avatar" style="background:#EA4335"></div>
-                  <div class="sl-row-content">
-                    <span class="sl-sender-name">Sender</span>
-                    <span class="sl-subject-text" id="gmail-subject">Your weekly digest is here ✨</span>
-                    <span class="sl-preview-text" id="gmail-preview"> — Catch up on everything this week...</span>
-                  </div>
-                  <span class="sl-time">9:41 AM</span>
-                </div>
-              </div>
-              <div class="sl-limit-note">Max ~70 chars subject line on desktop</div>
-            </div>
-            <div class="sl-client-card" data-client="outlook">
-              <div class="sl-client-logo outlook-logo">O</div>
-              <div class="sl-client-name">Outlook</div>
-              <div class="sl-client-preview">
-                <div class="sl-inbox-row outlook-style">
-                  <div class="sl-row-content">
-                    <span class="sl-sender-name">Sender</span>
-                    <span class="sl-subject-text" id="outlook-subject">Your weekly digest is here ✨</span>
-                    <span class="sl-preview-text" id="outlook-preview">Catch up on everything this week...</span>
-                  </div>
-                  <span class="sl-time">9:41 AM</span>
-                </div>
-              </div>
-              <div class="sl-limit-note">Max ~60 chars subject line on desktop</div>
-            </div>
-            <div class="sl-client-card" data-client="apple">
-              <div class="sl-client-logo apple-logo">✉</div>
-              <div class="sl-client-name">Apple Mail</div>
-              <div class="sl-client-preview">
-                <div class="sl-inbox-row apple-style">
-                  <div class="sl-avatar" style="background:#34C759"></div>
-                  <div class="sl-row-content">
-                    <span class="sl-sender-name">Sender</span>
-                    <span class="sl-time small-time">9:41 AM</span>
-                    <br/>
-                    <span class="sl-subject-text" id="apple-subject">Your weekly digest is here ✨</span>
-                    <span class="sl-preview-text" id="apple-preview">Catch up on everything this week — top stories, tools, and tips.</span>
-                  </div>
-                </div>
-              </div>
-              <div class="sl-limit-note">Shows longer preview text on desktop</div>
-            </div>
-            <div class="sl-client-card" data-client="mobile">
-              <div class="sl-client-logo mobile-logo">📱</div>
-              <div class="sl-client-name">iOS Mail</div>
-              <div class="sl-client-preview mobile-preview">
-                <div class="sl-inbox-row mobile-style">
-                  <div class="sl-avatar" style="background:#5856D6"></div>
-                  <div class="sl-row-content">
-                    <span class="sl-sender-name">Sender</span>
-                    <span class="sl-time small-time">9:41 AM</span>
-                    <br/>
-                    <span class="sl-subject-text" id="mobile-subject">Your weekly digest…</span>
-                    <br/>
-                    <span class="sl-preview-text" id="mobile-preview">Catch up on everything this week...</span>
-                  </div>
-                </div>
-              </div>
-              <div class="sl-limit-note">Max ~35 chars subject on mobile</div>
-            </div>
-          </div>
-          <button class="btn btn-primary" id="sl-preview-btn">Update All Previews</button>
         </div>
       </div>
     </section>

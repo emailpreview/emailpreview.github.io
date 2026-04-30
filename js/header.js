@@ -12,7 +12,8 @@
       </a>
       <nav aria-label="Main navigation">
         <ul class="header-nav">
-          <li><a href="/#preview-tool">Preview Tool</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/mailto-link-generator">Email Link</a></li>
           <li><a href="/#features">Features</a></li>
           <li><a href="/#best-practices">Best Practices</a></li>
           <li><a href="/#subject-preview">Subject Preview</a></li>
@@ -32,7 +33,8 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-      <a href="/#preview-tool">Preview Tool</a>
+      <a href="/">Home</a>
+      <a href="/mailto-link-generator">Email Link</a>
       <a href="/#features">Features</a>
       <a href="/#best-practices">Best Practices</a>
       <a href="/#subject-preview">Subject Preview</a>
